@@ -13,11 +13,15 @@ nnoremap <C-Down> <Cmd>horizontal resize -1<Cr>
 nnoremap <C-Left> <Cmd>vertical resize +1<Cr>
 nnoremap <C-Right> <Cmd>vertical resize -1<Cr>
 
+" Paste
+nnoremap p P
+nnoremap P p
+
 " Terminal
 nnoremap <C-t> <Cmd>terminal<Cr>
 
 " Insert mod
-inoremap <C-j> <C-o>o
+inoremap <C-i> <C-o>I
 inoremap <C-a> <C-o>A
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>

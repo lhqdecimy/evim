@@ -53,3 +53,10 @@ set mouse=a
 set virtualedit=onemore
 set selection=exclusive
 set autoread
+
+" Cursor
+let &t_SI = "\<Esc>[6 q"
+let &t_EI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[6 q"
+
+set smoothscroll
