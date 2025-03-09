@@ -8,6 +8,10 @@ nnoremap <Cr> <Cmd>nohl<Cr>
 
 " Window
 nnoremap <C-s> <Cmd>vertical split<Cr>
+nnoremap <C-Up> <Cmd>horizontal resize +1<Cr>
+nnoremap <C-Down> <Cmd>horizontal resize -1<Cr>
+nnoremap <C-Left> <Cmd>vertical resize +1<Cr>
+nnoremap <C-Right> <Cmd>vertical resize -1<Cr>
 
 " Terminal
 nnoremap <C-t> <Cmd>terminal<Cr>

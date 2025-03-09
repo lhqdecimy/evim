@@ -17,10 +17,18 @@ set showcmd
 set showmode
 set wrap
 
+" Status line
+set laststatus=2
+set statusline=\|\ %n\ %t\ %y\%m\ %w%q%h%=%S\ %l,%v\ \|
+
 " Indent
 set autoindent
 set smartindent
 set cindent
+
+" Complete
+set completeopt=menuone,preview,popup,longest,noinsert,noselect,fuzzy
+set complete=.,b,k,w
 
 " Tabs and shift
 set tabstop=4
@@ -44,3 +52,4 @@ set nofoldenable
 set mouse=a
 set virtualedit=onemore
 set selection=exclusive
+set autoread

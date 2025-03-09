@@ -16,3 +16,4 @@ augroup END
 augroup ESaveView
     autocmd BufWinLeave,BufLeave,BufWritePost * silent! mkview
     autocmd BufWinEnter * silent! loadview
+augroup END
