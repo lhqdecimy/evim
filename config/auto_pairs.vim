@@ -3,16 +3,16 @@ inoremap ( ()<Left>
 inoremap [ []<Left>
 inoremap { {}<Left>
 
-inoremap <silent> ) <C-o>:call ELeavePairs(')')<Cr>
-inoremap <silent> ] <C-o>:call ELeavePairs(']')<Cr>
-inoremap <silent> } <C-o>:call ELeavePairs('}')<Cr>
-inoremap <silent> ' <C-o>:call ELeavePairs("'")<Cr>
-inoremap <silent> " <C-o>:call ELeavePairs('"')<Cr>
+inoremap <silent> ) <C-o>:call <Sid>LeavePairs(')')<Cr>
+inoremap <silent> ] <C-o>:call <Sid>LeavePairs(']')<Cr>
+inoremap <silent> } <C-o>:call <Sid>LeavePairs('}')<Cr>
+inoremap <silent> ' <C-o>:call <Sid>LeavePairs("'")<Cr>
+inoremap <silent> " <C-o>:call <Sid>LeavePairs('"')<Cr>
 
-inoremap <silent> <Backspace> <C-o>:call EDeletePairs()<Cr><Backspace>
-inoremap <silent> <Cr> <C-o>:call ENewLine()<Cr><Cr>
+inoremap <silent> <Backspace> <C-o>:call <Sid>DeletePairs()<Cr><Backspace>
+inoremap <silent> <Cr> <C-o>:call <Sid>NewLine()<Cr><Cr>
 
-function! ELeavePairs(right)
+function! s:LeavePairs(right)
     let l:line = getline('.')
     let l:column = col('.')
     let l:right = l:line[l:column -1]
@@ -25,7 +25,7 @@ function! ELeavePairs(right)
     endif
 endfunction
 
-function! EDeletePairs()
+function! s:DeletePairs()
     let l:line = getline('.')
     let l:column = col('.')
 
@@ -42,12 +42,10 @@ function! EDeletePairs()
         normal! x
     elseif l:left ==# '"' && l:right ==# '"'
         normal! x
-    elseif l:left ==# '<' && l:right ==# '>'
-        normal! x
     endif
 endfunction
 
-function! ENewLine()
+function! s:NewLine()
     let l:line = getline('.')
     let l:column = col('.')
     let l:right = l:line[l:column - 1]

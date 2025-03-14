@@ -28,7 +28,6 @@ set cindent
 
 " Complete
 set completeopt=menuone,preview,popup,longest,noinsert,noselect,fuzzy
-set complete=.,b,k,w
 
 " Tabs and shift
 set tabstop=4
@@ -44,7 +43,6 @@ set hlsearch
 set splitright
 set splitbelow
 
-set undofile
 set exrc
 set spell
 set foldmethod=indent
@@ -52,7 +50,12 @@ set nofoldenable
 set mouse=a
 set virtualedit=onemore
 set selection=exclusive
+
 set autoread
+set noswapfile
+set undofile
+set hidden
+set autowrite
 
 " Cursor
 let &t_SI = "\<Esc>[6 q"
