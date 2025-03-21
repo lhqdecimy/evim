@@ -14,8 +14,8 @@ nnoremap <C-Left> <Cmd>vertical resize +1<Cr>
 nnoremap <C-Right> <Cmd>vertical resize -1<Cr>
 
 " Paste
-nnoremap p P
-nnoremap P p
+nnoremap p i<C-r>0
+nnoremap P i<C-r>"
 
 " Terminal
 nnoremap <C-t> <Cmd>terminal<Cr>

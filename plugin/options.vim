@@ -7,6 +7,11 @@ syntax on
 
 " Appearance
 colorscheme habamax
+highlight Normal guifg=#eeeeee guibg=#1c1c1c ctermfg=244 ctermbg=189
+highlight StatusLine guifg=#eeeeee guibg=#005fff ctermfg=255 ctermbg=027 gui=NONE cterm=NONE
+highlight StatusLineNC guifg=#eeeeee guibg=#005fff ctermfg=255 ctermbg=027 gui=NONE cterm=NONE
+highlight EndOfBuffer guifg=bg guibg=bg ctermfg=bg ctermbg=bg gui=NONE cterm=NONE
+
 set number
 set relativenumber
 set ruler
